@@ -30,6 +30,19 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
+<label>Feeling: <input name=f type="text" oninput="check(this)"></label>
+<script>
+ function check(input) {
+   if (input.value == "good" ||
+       input.value == "fine" ||
+       input.value == "tired") {
+     input.setCustomValidity('"' + input.value + '" is not a feeling.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+</script>
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
